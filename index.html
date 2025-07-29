@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCALE Framework - Business Growth Methodology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+        .phase-timeline {
+            position: relative;
+        }
+        .phase-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .phase-item {
+            position: relative;
+            margin-left: 50px;
+        }
+        .phase-dot {
+            position: absolute;
+            left: -45px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #667eea;
+        }
+        .checklist-item {
+            transition: all 0.2s ease;
+        }
+        .checklist-item.completed {
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-2">SCALE Framework</h1>
+                <p class="text-xl opacity-90">DGS Consulting's Proprietary Business Growth Methodology</p>
+                <div class="mt-6 grid grid-cols-5 gap-2 max-w-md mx-auto">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span class="text-lg font-bold">S</span>
+                        </div>
+                        <span class="text-xs">Streamline</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span class="text-lg font-bold">C</span>
+                        </div>
+                        <span class="text-xs">Customer</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span class="text-lg font-bold">A</span>
+                        </div>
+                        <span class="text-xs">Adapt</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span class="text-lg font-bold">L</span>
+                        </div>
+                        <span class="text-xs">Leverage</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span class="text-lg font-bold">E</span>
+                        </div>
+                        <span class="text-xs">Empower</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-8">
+                <button class="nav-btn py-4 px-2 border-b-2 border-blue-500 text-blue-600 font-medium" data-section="overview">
+                    Overview
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="streamline">
+                    Streamline
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="customer">
+                    Customer-Centric
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="adapt">
+                    Adapt & Innovate
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="leverage">
+                    Leverage Data
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="empower">
+                    Empower Team
+                </button>
+                <button class="nav-btn py-4 px-2 border-b-2 border-transparent hover:border-blue-300 text-gray-500 hover:text-gray-700" data-section="progress">
+                    My Progress
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Overview Section -->
+        <div id="overview-section" class="section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Complete Implementation Guide</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Transform your business with our proven 5-pillar methodology. Each component builds upon the others to create sustainable growth.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-blue-600">S</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Streamline Processes</h3>
+                    <p class="text-gray-600 mb-4">Eliminate waste, reduce complexity, and create smooth workflows that free up resources for growth activities.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ 25% reduction in process time</div>
+                        <div>✓ 50% decrease in errors</div>
+                        <div>✓ 20% increase in productivity</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-green-600">C</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Customer-Centric</h3>
+                    <p class="text-gray-600 mb-4">Build your business around customer value to drive loyalty and turn satisfied customers into growth engines.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ NPS improvement</div>
+                        <div>✓ Higher retention rates</div>
+                        <div>✓ Increased lifetime value</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-purple-600">A</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Adapt & Innovate</h3>
+                    <p class="text-gray-600 mb-4">Stay ahead in a dynamic market by continuously evolving and embracing change.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ Market responsiveness</div>
+                        <div>✓ Innovation pipeline</div>
+                        <div>✓ Competitive advantage</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-yellow-600">L</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Leverage Data</h3>
+                    <p class="text-gray-600 mb-4">Make informed decisions with data-driven insights that consistently outperform intuition.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ Real-time dashboards</div>
+                        <div>✓ Predictive analytics</div>
+                        <div>✓ Better decision making</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-red-600">E</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Empower Team</h3>
+                    <p class="text-gray-600 mb-4">Unlock human potential through engaged, skilled, and autonomous teams.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ Higher engagement</div>
+                        <div>✓ Skill development</div>
+                        <div>✓ Leadership growth</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-2xl font-bold text-indigo-600">📈</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Integration Guide</h3>
+                    <p class="text-gray-600 mb-4">Follow our 3-month implementation roadmap for sustainable growth patterns.</p>
+                    <div class="text-sm text-gray-500">
+                        <div>✓ 30-day quick wins</div>
+                        <div>✓ 90-day cultural shifts</div>
+                        <div>✓ 180-day growth patterns</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-semibold mb-6">Implementation Timeline</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-blue-600">1</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Month 1</h4>
+                        <p class="text-gray-600">Focus on Streamline and Customer-Centric foundations</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-green-600">2</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Month 2</h4>
+                        <p class="text-gray-600">Implement Adapt and Leverage Data systems</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-purple-600">3</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Month 3</h4>
+                        <p class="text-gray-600">Emphasize Empower Your Team while optimizing other areas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Streamline Section -->
+        <div id="streamline-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Streamline Processes</h2>
+                <p class="text-xl text-gray-600">The Foundation of Operational Excellence</p>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <p class="text-blue-800"><strong>Core Principle:</strong> Eliminate waste, reduce complexity, and create smooth workflows that free up resources for growth activities.</p>
+                </div>
+            </div>
+
+            <div class="phase-timeline mb-8">
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 1: Process Discovery (Week 1)</h3>
+                        <p class="text-gray-600 mb-4">Identify Your Process Landscape</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Quick Win Checklist:</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center checklist-item cursor-pointer">
+                                    <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" data-checklist="streamline">
+                                    <span>List all repetitive tasks performed weekly</span>
+                                </label>
+                                <label class="flex items-center checklist-item cursor-pointer">
+                                    <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" data-checklist="streamline">
+                                    <span>Identify tasks taking >30 minutes that could be simplified</span>
+                                </label>
+                                <label class="flex items-center checklist-item cursor-pointer">
+                                    <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" data-checklist="streamline">
+                                    <span>Note processes requiring multiple handoffs</span>
+                                </label>
+                                <label class="flex items-center checklist-item cursor-pointer">
+                                    <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" data-checklist="streamline">
+                                    <span>Document tasks causing frequent errors or rework</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-medium mb-2">Key Activities:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Map all core business processes</li>
+                                    <li>• Document current state workflows</li>
+                                    <li>• Time-track activities for one week</li>
+                                    <li>• Interview team members</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-medium mb-2">Focus Areas:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Sales processes</li>
+                                    <li>• Operations workflows</li>
+                                    <li>• Customer service</li>
+                                    <li>• Administrative tasks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 2: Analysis & Prioritization (Week 2)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Process Evaluation Matrix</h4>
+                            <p class="text-gray-600 mb-3">Rate each process on (1-5 scale):</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Impact on customer experience</li>
+                                        <li>• Time consumption</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Error frequency</li>
+                                        <li>• Automation potential</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3">Prioritization Framework:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <div class="mb-2"><span class="font-medium text-green-600">High Impact, Easy Wins:</span> Implement immediately</div>
+                                    <div><span class="font-medium text-orange-600">High Impact, Complex:</span> Plan for month 2-3</div>
+                                </div>
+                                <div>
+                                    <div class="mb-2"><span class="font-medium text-blue-600">Low Impact, Easy:</span> Batch together</div>
+                                    <div><span class="font-medium text-gray-600">Low Impact, Complex:</span> Consider elimination</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 3: Implementation (Weeks 3-4)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">The 3-Step Streamline Method:</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                        <span class="text-red-600 font-bold text-sm">1</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Eliminate</h5>
+                                        <p class="text-sm text-gray-600">Remove unnecessary steps, approvals, and handoffs</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                        <span class="text-blue-600 font-bold text-sm">2</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Automate</h5>
+                                        <p class="text-sm text-gray-600">Use technology for repetitive, rule-based tasks</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                        <span class="text-green-600 font-bold text-sm">3</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Delegate</h5>
+                                        <p class="text-sm text-gray-600">Move tasks to appropriate skill levels</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h5 class="font-medium mb-3">Common Streamlining Opportunities:</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Email templates for frequent communications</li>
+                                    <li>• Automated invoicing and payment processing</li>
+                                    <li>• Standardized onboarding checklists</li>
+                                    <li>• Digital approval workflows</li>
+                                    <li>• Batch processing of similar tasks</li>
+                                </ul>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h5 class="font-medium mb-3 text-green-800">Success Metrics:</h5>
+                                <ul class="text-sm text-green-700 space-y-1">
+                                    <li>• 25% reduction in process completion time</li>
+                                    <li>• 50% decrease in process-related errors</li>
+                                    <li>• 20% increase in team productivity scores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer-Centric Section -->
+        <div id="customer-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Customer-Centric Approach</h2>
+                <p class="text-xl text-gray-600">Building Business Around Customer Value</p>
+                <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                    <p class="text-green-800"><strong>Core Principle:</strong> Every decision should enhance customer experience and drive loyalty, as satisfied customers are your best growth engine.</p>
+                </div>
+            </div>
+
+            <div class="phase-timeline mb-8">
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 1: Customer Intelligence Gathering (Week 1)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Deep Customer Understanding</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h5 class="font-medium mb-2">Data Collection:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Deploy comprehensive feedback surveys</li>
+                                        <li>• Conduct 5-10 customer interviews</li>
+                                        <li>• Analyze customer journey touchpoints</li>
+                                        <li>• Review customer service tickets</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">Segmentation Exercise:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Demographic profiling</li>
+                                        <li>• Behavioral patterns analysis</li>
+                                        <li>• Value tier classification</li>
+                                        <li>• Communication preference mapping</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2 text-blue-800">Key Survey Types:</h5>
+                            <div class="text-sm text-blue-700 grid md:grid-cols-3 gap-2">
+                                <div>• NPS (Net Promoter Score)</div>
+                                <div>• Satisfaction surveys</div>
+                                <div>• Needs assessment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 2: Experience Optimization (Weeks 2-3)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-4">The Customer Journey Audit</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-purple-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Awareness</h5>
+                                        <p class="text-sm text-gray-600">How do customers discover you?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Consideration</h5>
+                                        <p class="text-sm text-gray-600">What information do they need?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Purchase</h5>
+                                        <p class="text-sm text-gray-600">How smooth is the buying process?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Onboarding</h5>
+                                        <p class="text-sm text-gray-600">How quickly do they see value?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Ongoing</h5>
+                                        <p class="text-sm text-gray-600">What keeps them engaged?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-3 h-3 bg-indigo-500 rounded-full mr-3 mt-2"></div>
+                                    <div>
+                                        <h5 class="font-medium">Advocacy</h5>
+                                        <p class="text-sm text-gray-600">What makes them recommend you?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-green-800">Personalization Strategy:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                                <div>
+                                    <div>• Segment-specific messaging</div>
+                                    <div>• Customized product/service bundles</div>
+                                </div>
+                                <div>
+                                    <div>• Tailored communication cadence</div>
+                                    <div>• Individual account management approaches</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 3: Continuous Improvement (Week 4+)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Feedback Loop Implementation:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Monthly customer satisfaction surveys</li>
+                                        <li>• Quarterly business review calls with key clients</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Real-time feedback collection at service touchpoints</li>
+                                        <li>• Customer advisory board for strategic input</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-green-800">Customer Success Metrics:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                                <div>
+                                    <div>• Net Promoter Score (NPS) improvement</div>
+                                    <div>• Customer retention rate increase</div>
+                                </div>
+                                <div>
+                                    <div>• Average customer lifetime value growth</div>
+                                    <div>• Customer acquisition cost reduction through referrals</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adapt & Innovate Section -->
+        <div id="adapt-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Adapt and Innovate</h2>
+                <p class="text-xl text-gray-600">Staying Ahead in a Dynamic Market</p>
+                <div class="mt-4 p-4 bg-purple-50 rounded-lg">
+                    <p class="text-purple-800"><strong>Core Principle:</strong> Businesses that continuously evolve and embrace change outperform those that remain static.</p>
+                </div>
+            </div>
+
+            <div class="phase-timeline mb-8">
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 1: Market Intelligence (Week 1)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Environmental Scanning Framework</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h5 class="font-medium mb-2">Analysis Areas:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Industry trend analysis</li>
+                                        <li>• Competitive landscape monitoring</li>
+                                        <li>• Emerging technology assessment</li>
+                                        <li>• Economic indicator tracking</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">Innovation Opportunities:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Customer unmet needs analysis</li>
+                                        <li>• Process improvement possibilities</li>
+                                        <li>• Technology integration opportunities</li>
+                                        <li>• New market segment exploration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2 text-purple-800">Focus Areas for Trend Analysis:</h5>
+                            <div class="text-sm text-purple-700 grid md:grid-cols-3 gap-2">
+                                <div>• Technology changes</div>
+                                <div>• Regulatory shifts</div>
+                                <div>• Customer behavior evolution</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 2: Innovation Pipeline Development (Weeks 2-3)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-4">The Innovation Funnel:</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                        <span class="text-white font-bold">💡</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Ideation</h5>
+                                        <p class="text-sm text-gray-600">Generate 20+ improvement ideas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg">
+                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                        <span class="text-white font-bold">🔍</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Screening</h5>
+                                        <p class="text-sm text-gray-600">Filter based on feasibility and impact</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-lg">
+                                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                                        <span class="text-white font-bold">🧪</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Testing</h5>
+                                        <p class="text-sm text-gray-600">Run small-scale pilots with top 3-5 ideas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                        <span class="text-white font-bold">🚀</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">Implementation</h5>
+                                        <p class="text-sm text-gray-600">Scale successful tests</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-purple-800">Adaptation Strategies:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-purple-700">
+                                <div>
+                                    <div>• Technology adoption roadmap</div>
+                                    <div>• Skill development planning</div>
+                                </div>
+                                <div>
+                                    <div>• Process flexibility enhancement</div>
+                                    <div>• Product/service evolution planning</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 3: Culture of Innovation (Week 4+)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Building Adaptive Capacity:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Monthly innovation challenges for team</li>
+                                        <li>• Dedicated time for experimentation (Google's 20% time concept)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Failure celebration and learning extraction</li>
+                                        <li>• Cross-industry insight gathering</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-purple-800">Innovation Metrics:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-purple-700">
+                                <div>
+                                    <div>• New ideas generated per month</div>
+                                    <div>• Innovation projects in pipeline</div>
+                                </div>
+                                <div>
+                                    <div>• Revenue from new offerings</div>
+                                    <div>• Speed of market response</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leverage Data Section -->
+        <div id="leverage-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Leverage Data</h2>
+                <p class="text-xl text-gray-600">Making Informed Decisions</p>
+                <div class="mt-4 p-4 bg-yellow-50 rounded-lg">
+                    <p class="text-yellow-800"><strong>Core Principle:</strong> Data-driven decisions consistently outperform intuition-based ones, especially when scaled across an organization.</p>
+                </div>
+            </div>
+
+            <div class="phase-timeline mb-8">
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 1: Data Architecture (Week 1)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Information Audit:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Inventory all data sources (CRM, accounting, operations, marketing)</li>
+                                        <li>• Assess data quality and completeness</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Identify critical gaps in measurement</li>
+                                        <li>• Evaluate current reporting capabilities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-yellow-800">Key Performance Indicator (KPI) Framework:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-yellow-700">
+                                <div>
+                                    <div><strong>Financial:</strong> Revenue, profit margins, cash flow</div>
+                                    <div><strong>Operational:</strong> Efficiency, quality, capacity utilization</div>
+                                </div>
+                                <div>
+                                    <div><strong>Customer:</strong> Satisfaction, retention, acquisition cost</div>
+                                    <div><strong>Growth:</strong> Market share, new opportunities, innovation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 2: Dashboard Development (Weeks 2-3)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Executive Dashboard Design:</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h5 class="font-medium mb-2">Core Components:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Real-time performance indicators</li>
+                                        <li>• Trend analysis over time</li>
+                                        <li>• Comparative benchmarking</li>
+                                        <li>• Alert systems for critical metrics</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">Departmental Scorecards:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Role-specific metrics alignment</li>
+                                        <li>• Daily/weekly operational indicators</li>
+                                        <li>• Individual performance tracking</li>
+                                        <li>• Team collaboration metrics</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2 text-blue-800">Dashboard Best Practices:</h5>
+                            <div class="text-sm text-blue-700 grid md:grid-cols-2 gap-2">
+                                <div>• Visual clarity and simplicity</div>
+                                <div>• Mobile-responsive design</div>
+                                <div>• Real-time data updates</div>
+                                <div>• Drill-down capabilities</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 3: Analytics Culture (Week 4+)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Data-Driven Decision Making:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Weekly data review meetings</li>
+                                        <li>• Hypothesis-driven testing</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• A/B testing for improvements</li>
+                                        <li>• Predictive analytics implementation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-yellow-800">Advanced Analytics Applications:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-yellow-700">
+                                <div>
+                                    <div>• Customer behavior prediction</div>
+                                    <div>• Operational optimization modeling</div>
+                                </div>
+                                <div>
+                                    <div>• Financial forecasting enhancement</div>
+                                    <div>• Risk assessment automation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empower Team Section -->
+        <div id="empower-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Empower Your Team</h2>
+                <p class="text-xl text-gray-600">Unlocking Human Potential</p>
+                <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                    <p class="text-red-800"><strong>Core Principle:</strong> Engaged, skilled, and autonomous teams are the ultimate competitive advantage.</p>
+                </div>
+            </div>
+
+            <div class="phase-timeline mb-8">
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 1: Team Assessment (Week 1)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Current State Evaluation:</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h5 class="font-medium mb-2">Individual Assessment:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Individual skill and competency mapping</li>
+                                        <li>• Engagement and satisfaction surveys</li>
+                                        <li>• Performance review analysis</li>
+                                        <li>• Career aspiration discussions</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium mb-2">Organizational Health Check:</h5>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Communication effectiveness</li>
+                                        <li>• Decision-making clarity</li>
+                                        <li>• Resource availability</li>
+                                        <li>• Cultural alignment assessment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2 text-red-800">Assessment Tools:</h5>
+                            <div class="text-sm text-red-700 grid md:grid-cols-3 gap-2">
+                                <div>• Skills matrix</div>
+                                <div>• 360-degree feedback</div>
+                                <div>• Culture surveys</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 2: Development Planning (Weeks 2-3)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Individual Growth Plans:</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Skill gap identification</li>
+                                        <li>• Learning pathway creation</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Mentorship program establishment</li>
+                                        <li>• Cross-training opportunities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Team Empowerment Structure:</h4>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Authority level clarification</li>
+                                        <li>• Decision-making delegation</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Resource access provision</li>
+                                        <li>• Performance accountability systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2 text-red-800">Empowerment Levels:</h5>
+                            <div class="space-y-2 text-sm text-red-700">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-300 rounded-full mr-2"></div>
+                                    <span>Level 1: Information sharing</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full mr-2"></div>
+                                    <span>Level 2: Consultation on decisions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                    <span>Level 3: Joint decision making</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-600 rounded-full mr-2"></div>
+                                    <span>Level 4: Full autonomy within bounds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item mb-8">
+                    <div class="phase-dot"></div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Phase 3: Continuous Development (Week 4+)</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Empowerment Ecosystem:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Regular coaching conversations</li>
+                                        <li>• Skill-building investments</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="text-sm text-gray-600 space-y-2">
+                                        <li>• Innovation project assignments</li>
+                                        <li>• Leadership development tracks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h5 class="font-medium mb-3 text-red-800">Team Performance Metrics:</h5>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-red-700">
+                                <div>
+                                    <div>• Employee engagement scores</div>
+                                    <div>• Skill development completion rates</div>
+                                </div>
+                                <div>
+                                    <div>• Internal promotion percentages</div>
+                                    <div>• Team productivity improvements</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Section -->
+        <div id="progress-section" class="section hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Progress</h2>
+                <p class="text-xl text-gray-600">Track your SCALE Framework implementation</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-600">Streamline Progress</h3>
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Completion</span>
+                            <span id="streamline-progress">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="streamline-bar" class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Complete the Streamline checklist to track your progress.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-green-600">Overall Health Score</h3>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-800 mb-2" id="health-score">--</div>
+                        <p class="text-sm text-gray-600">Business Health Indicator</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-purple-600">Implementation Timeline</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Month 1</span>
+                            <span class="text-green-600">✓ Started</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Month 2</span>
+                            <span class="text-gray-400">Pending</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Month 3</span>
+                            <span class="text-gray-400">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-xl font-semibold mb-6">Success Measurement Framework</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-4">Business Health Indicators</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="text-sm">Revenue growth rate</span>
+                                <input type="number" placeholder="%" class="w-16 px-2 py-1 text-sm border rounded" id="revenue-growth">
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="text-sm">Profit margin improvement</span>
+                                <input type="number" placeholder="%" class="w-16 px-2 py-1 text-sm border rounded" id="profit-margin">
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="text-sm">Customer retention increase</span>
+                                <input type="number" placeholder="%" class="w-16 px-2 py-1 text-sm border rounded" id="retention-rate">
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="text-sm">Employee satisfaction scores</span>
+                                <input type="number" placeholder="/10" class="w-16 px-2 py-1 text-sm border rounded" id="employee-satisfaction">
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="text-sm">Operational efficiency gains</span>
+                                <input type="number" placeholder="%" class="w-16 px-2 py-1 text-sm border rounded" id="efficiency-gains">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Implementation Milestones</h4>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-gray-50 rounded cursor-pointer">
+                                <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" id="milestone-30">
+                                <span class="text-sm">30-day quick wins achieved</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded cursor-pointer">
+                                <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" id="milestone-60">
+                                <span class="text-sm">60-day system implementations complete</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded cursor-pointer">
+                                <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" id="milestone-90">
+                                <span class="text-sm">90-day cultural shifts observable</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-50 rounded cursor-pointer">
+                                <input type="checkbox" class="mr-3 h-4 w-4 text-blue-600 rounded" id="milestone-180">
+                                <span class="text-sm">180-day sustainable growth patterns established</span>
+                            </label>
+                        </div>
+                        
+                        <button onclick="calculateHealthScore()" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                            Calculate Health Score
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-4">Next Steps</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">This Week</h4>
+                        <p class="text-sm opacity-90">Complete Phase 1 assessments for your chosen SCALE component</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">This Month</h4>
+                        <p class="text-sm opacity-90">Implement quick wins and establish measurement baselines</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-semibold mb-2">Next 90 Days</h4>
+                        <p class="text-sm opacity-90">Follow the full implementation roadmap for sustainable transformation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">This guide represents DGS Consulting's proven methodology for sustainable business growth.</p>
+            <p class="text-gray-400 text-sm">For personalized implementation support, consider our Growth Plan or Scale Plan consulting services.</p>
+            <div class="mt-6">
+                <a href="#" class="text-blue-400 hover:text-blue-300 mr-6">GitHub Repository</a>
+                <a href="#" class="text-blue-400 hover:text-blue-300 mr-6">Documentation</a>
+                <a href="#" class="text-blue-400 hover:text-blue-300">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const sections = document.querySelectorAll('.section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Update navigation styles
+                    navButtons.forEach(btn => {
+                        btn.classList.remove('border-blue-500', 'text-blue-600');
+                        btn.classList.add('border-transparent', 'text-gray-500');
+                    });
+                    this.classList.remove('border-transparent', 'text-gray-500');
+                    this.classList.add('border-blue-500', 'text-blue-600');
+                    
+                    // Show target section
+                    sections.forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    document.getElementById(targetSection + '-section').classList.remove('hidden');
+                });
+            });
+
+            // Checklist functionality
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][data-checklist]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const label = this.closest('label');
+                    if (this.checked) {
+                        label.classList.add('completed');
+                    } else {
+                        label.classList.remove('completed');
+                    }
+                    updateProgress();
+                });
+            });
+
+            // Progress tracking
+            function updateProgress() {
+                const streamlineCheckboxes = document.querySelectorAll('input[type="checkbox"][data-checklist="streamline"]');
+                const checkedBoxes = document.querySelectorAll('input[type="checkbox"][data-checklist="streamline"]:checked');
+                
+                if (streamlineCheckboxes.length > 0) {
+                    const progress = Math.round((checkedBoxes.length / streamlineCheckboxes.length) * 100);
+                    document.getElementById('streamline-progress').textContent = progress + '%';
+                    document.getElementById('streamline-bar').style.width = progress + '%';
+                }
+            }
+
+            // Initialize progress
+            updateProgress();
+        });
+
+        // Health score calculation
+        function calculateHealthScore() {
+            const revenueGrowth = parseFloat(document.getElementById('revenue-growth').value) || 0;
+            const profitMargin = parseFloat(document.getElementById('profit-margin').value) || 0;
+            const retentionRate = parseFloat(document.getElementById('retention-rate').value) || 0;
+            const employeeSatisfaction = parseFloat(document.getElementById('employee-satisfaction').value) || 0;
+            const efficiencyGains = parseFloat(document.getElementById('efficiency-gains').value) || 0;
+
+            // Simple scoring algorithm (can be enhanced)
+            let score = 0;
+            score += Math.min(revenueGrowth * 2, 20); // Max 20 points
+            score += Math.min(profitMargin * 2, 20); // Max 20 points
+            score += Math.min(retentionRate * 2, 20); // Max 20 points
+            score += Math.min(employeeSatisfaction * 2, 20); // Max 20 points
+            score += Math.min(efficiencyGains * 2, 20); // Max 20 points
+
+            // Check milestones
+            const milestones = ['milestone-30', 'milestone-60', 'milestone-90', 'milestone-180'];
+            milestones.forEach(milestone => {
+                if (document.getElementById(milestone).checked) {
+                    score += 5; // 5 points per milestone
+                }
+            });
+
+            const finalScore = Math.min(Math.round(score), 100);
+            document.getElementById('health-score').textContent = finalScore;
+
+            // Visual feedback
+            const healthScoreElement = document.getElementById('health-score');
+            if (finalScore >= 80) {
+                healthScoreElement.className = 'text-3xl font-bold text-green-600 mb-2';
+            } else if (finalScore >= 60) {
+                healthScoreElement.className = 'text-3xl font-bold text-yellow-600 mb-2';
+            } else {
+                healthScoreElement.className = 'text-3xl font-bold text-red-600 mb-2';
+            }
+
+            // Show celebration or encouragement
+            if (finalScore >= 80) {
+                showNotification('Excellent! Your business is showing strong growth indicators.', 'success');
+            } else if (finalScore >= 60) {
+                showNotification('Good progress! Focus on the lower-scoring areas for improvement.', 'warning');
+            } else {
+                showNotification('There\'s room for improvement. Start with the Streamline process!', 'info');
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full`;
+            
+            if (type === 'success') {
+                notification.classList.add('bg-green-500', 'text-white');
+            } else if (type === 'warning') {
+                notification.classList.add('bg-yellow-500', 'text-white');
+            } else {
+                notification.classList.add('bg-blue-500', 'text-white');
+            }
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 4000);
+        }
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.card-hover').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Add hover effects to phase items
+            document.querySelectorAll('.phase-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+
+        // Local storage alternative using JavaScript objects
+        let appData = {
+            progress: {},
+            metrics: {},
+            checklist: {}
+        };
+
+        // Save data function
+        function saveData() {
+            // In a real application, this would sync to a backend
+            console.log('Data saved:', appData);
+        }
+
+        // Load data function
+        function loadData() {
+            // In a real application, this would load from a backend
+            console.log('Data loaded:', appData);
+        }
+
+        // Export data function
+        function exportProgress() {
+            const dataStr = JSON.stringify(appData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'scale-framework-progress.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Add export button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add export button to progress section
+            const progressSection = document.getElementById('progress-section');
+            if (progressSection) {
+                const exportButton = document.createElement('button');
+                exportButton.textContent = 'Export Progress';
+                exportButton.className = 'mt-4 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors';
+                exportButton.onclick = exportProgress;
+                
+                const lastCard = progressSection.querySelector('.bg-gradient-to-r');
+                if (lastCard) {
+                    lastCard.parentNode.insertBefore(exportButton, lastCard.nextSibling);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
