@@ -1,4 +1,4 @@
-#SCALE Framework
+SCALE Framework
 
 The SCALE Framework is an open framework for building stronger, more efficient small-to-medium businesses. It provides a structured way to simplify operations, align teams, and drive sustainable growth.
 
