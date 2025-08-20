@@ -1,64 +1,66 @@
-SCALE Framework
+#SCALE Framework
 
-The SCALE Framework is a structured action plan designed to help small-to-medium businesses streamline operations, grow efficiently, and build systems that last. It’s simple enough to start using right away, but flexible enough to adapt to different industries and goals.
+The SCALE Framework is an open framework for building stronger, more efficient small-to-medium businesses. It provides a structured way to simplify operations, align teams, and drive sustainable growth.
 
-🚀 What is SCALE?
+This repo is free to use, adapt, and improve.
 
-SCALE is built around five pillars that guide sustainable growth:
+📚 What is SCALE?
 
-S – Simplify: Cut out unnecessary complexity. Focus on what really drives results.
+SCALE is built around five practical steps:
 
-C – Clarify: Define goals, processes, and responsibilities so nothing falls through the cracks.
+S – Simplify: Eliminate unnecessary complexity.
 
-A – Align: Get people, processes, and tools working in sync.
+C – Clarify: Define goals, roles, and processes.
 
-L – Leverage: Use data, tools, and resources to maximize efficiency.
+A – Align: Sync people, systems, and strategy.
 
-E – Execute: Turn strategy into consistent action and measurable results.
+L – Leverage: Use tools, data, and resources effectively.
 
-🛠 How to Use This Repo
+E – Execute: Turn plans into consistent results.
 
-This repository provides resources, templates, and guides for putting the SCALE Framework into practice:
+🛠 What’s Inside
 
-Framework Overview – a simple breakdown of the five steps
+This repository contains:
 
-Practical Worksheets – actionable templates you can copy and apply to your business
+Framework Overview – a breakdown of the SCALE steps
 
-Examples – real-world use cases showing SCALE in action
+Guides & Notes – practical explanations of each stage
 
-As this grows, it will include implementation guides, Notion/Excel templates, and playbooks.
+Templates (coming soon) – worksheets and process tools you can copy and adapt
 
-🎯 Who It’s For
+Examples (coming soon) – real-world use cases showing SCALE in action
 
-Business owners who want to scale without burning out
+🎯 Who Can Use It
 
-Consultants/advisors helping SMBs improve operations
+Entrepreneurs and business owners
 
-Teams that need structure for growth and efficiency
+Consultants and advisors
 
-📈 Why SCALE Works
+Teams building internal processes
 
-Most frameworks are too complex or too vague. SCALE cuts through the noise—it’s easy to understand, repeatable, and directly tied to outcomes.
+Anyone looking to streamline and scale operations
 
-💡 Roadmap
+🌱 Open Framework Philosophy
 
-Planned additions to this repo:
+The SCALE Framework is free and open because good systems should be accessible. You can use it as-is, remix it for your own work, or suggest improvements through pull requests.
 
- Full implementation guide (PDF & Notion template)
+🗺 Roadmap
 
- Worksheets and SOP templates
+Planned updates to this repo:
 
- Case studies from real businesses
+ Worksheets and templates
 
- Paid premium version with advanced playbooks
+ Industry-specific examples
+
+ Implementation playbooks
+
+ Community contributions and shared case studies
 
 🤝 Contributing
 
-Suggestions and improvements are welcome. Feel free to open an issue or pull request.
+Ideas, feedback, and improvements are always welcome. Open an issue or submit a pull request to help make SCALE more useful for everyone.
 
-📬 Stay Connected
+📬 Need More Support?
 
-Want updates, templates, or coaching on how to use SCALE in your business?
-👉 Follow DGS Consulting on LinkedIn
-
-👉 Connect with Darren
+If you want hands-on help applying SCALE in your business, I offer consulting through DGS Consulting
+.
